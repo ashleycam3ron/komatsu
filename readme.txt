@@ -1,1 +1,1 @@
-Custom WordPress theme using Bootstrap 2
+Custom WordPress theme using Bootstrap 3.3.6
