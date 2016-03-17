@@ -12,7 +12,7 @@
 					<img class="img-responsive img-circle" src="http://placehold.it/250x250">
 			 <?php } ?>
 			<h2><?php the_title(); ?></h2>
-			<span><?php echo implode(', ', get_field('ingredients2')); ?></span>
+			<span><?php echo implode(', ', get_field('ingredients')); ?></span>
 			<p class="price"><?php the_field('price'); ?></p>
 			<?php //the_content(); ?>
 		</div>

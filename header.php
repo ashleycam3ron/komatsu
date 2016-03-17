@@ -13,7 +13,7 @@
 	<meta name="dc.source" CONTENT="<?php echo esc_url( home_url() ) ?>">
 	<meta name="dc.title" CONTENT="<?php echo wp_title(); ?>">
 	<meta name="dc.subject" CONTENT="<?php bloginfo('description');?>">
-	<meta name="dc.creator" content="Minnow Project">
+	<meta name="dc.creator" content="Ashley N Cameron">
 	<title><?php echo wp_title();?></title>
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri() ?>/favicon.ico" />
     <link rel="icon" sizes="192x192" href="<?php echo get_stylesheet_directory_uri() ?>/images/favicon-192.png">
@@ -42,7 +42,7 @@
 			  'menu' => 'primary',
 			  'depth' => 2,
 			  'container' => false,
-			  'menu_class' => 'nav navbar-nav sticky',
+			  'menu_class' => 'nav navbar-nav',
 			  'walker' => new wp_bootstrap_navwalker())
 			); ?>
 		</div>

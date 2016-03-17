@@ -1,21 +1,17 @@
 <?php
 // CUSTOMIZE ADMIN MENU LABELS
-/*
 	function edit_admin_menus() {
 	    global $menu;
 	    global $submenu;
 
 	    $menu[5][0] = 'News'; // Change Posts to News
 	    $submenu['edit.php'][5][0] = 'All News';
-*/
 
 
 	    //remove_menu_page('tools.php'); // Remove the Tools menu
 	    //remove_submenu_page('themes.php','theme-editor.php'); // Remove the Theme Editor submenu
-/*
 	}
 	add_action( 'admin_menu', 'edit_admin_menus' );
-*/
 
 
 // CUSTOMIZE ADMIN MENU ORDER
