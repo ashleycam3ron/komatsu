@@ -73,9 +73,9 @@ jQuery(container).each(function() {
 }
 
 jQuery(window).load(function() {
-  equalheight('.equal .col');
+  equalheight('');
 });
 
 jQuery(window).resize(function(){
-  equalheight('.equal .col');
+  equalheight('');
 });

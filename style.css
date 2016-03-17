@@ -57,23 +57,25 @@ Text Domain: 	ashleycameron
 
 /* !01 Structure */
 	* 	 {margin: 0;padding: 0; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; }
-	body {font-family:Helvetica, Arial, sans-serif;font-size:16px;color:#333;}
+	body {font-family:"futura-pt",sans-serif;font-size:14px;color:#696969;}
 	.entry {padding-bottom: 5%;}
 	.inverse{background: black;color: white;padding-top:1.5%;padding-bottom: 2%;}
-
+	b,strong{color: #111;
+    font-weight: 300;
+    letter-spacing: .04em;}
 
 /* !02 Typography */
 	h1{font-size: 32px;}
-	h2{font-size: 28px;}
+	h2{font-size: 28px;color: #333;clear: both;letter-spacing: .15em;}
 	h3{font-size: 24px;}
 	h4{font-size: 18px;}
 	h5{font-size: 16px;}
 	h6{font-size: 14px;}
-	h1,h2,h3,h4{text-transform: uppercase;}
+	h1,h2,h3,h4{text-transform: uppercase;font-weight: normal;}
 	.xl	{font-size: 4rem;}
-	.lg {font-size: x-large;margin-bottom: 10px;display: block;}
+	.lg {font-size: large;margin-bottom: 10px;display: block;font-weight: bold;color: #7f7f7f;}
 	.lh {line-height: 2;}
-	p {margin: 0 0 14px;line-height: 1.75;}
+	p {margin: 0 0 17px;line-height: 1.45;}
 	blockquote	{}
 	li {list-style-position: inside;}
 
@@ -89,16 +91,17 @@ Text Domain: 	ashleycameron
 	a:active {color:#900;text-decoration: none;}
 
 /* !04 Buttons */
-	.btn-default {border: 2px solid;border-radius: 0;}
+	.btn-default {border: 2px solid;border-radius: 0;    padding: 10px 37px;
+    font-size: 12px;}
 	.btn-default.active,
 	.btn-default.focus,
 	.btn-default:active,
 	.btn-default:focus,
 	.btn-default:hover,
 	.open>.dropdown-toggle.btn-default {
-	  color: #FF7472;
-	  background-color: rgba(0, 0, 0, 0);
-	  border-color: #FF7472;
+	  color: #7B6E44;
+    background-color: rgba(0, 0, 0, 0);
+    border-color: #7B6E44;
 	}
 	.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {background-color: #FF942A;}
 	.navbar-toggle {border: none;background: transparent!important}
@@ -110,13 +113,30 @@ Text Domain: 	ashleycameron
 	.navbar-toggle.collapsed .top-bar { transform: rotate(0) }
 	.navbar-toggle.collapsed .middle-bar { opacity: 1 }
 	.navbar-toggle.collapsed .bottom-bar { transform: rotate(0) }
-
+	.btn {
+    color: #bca867;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-size: 11.5px;
+}
+	.btn-info{    background: #bca867;
+    color: #FFF;
+    border: 0;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-size: 12px;
+    padding: 10px 30px;
+    border-radius: 0;
+    line-height: 1;}
+.btn-info:hover,.btn-info:focus {
+    background: #A59359;}
 
 /* !06 Transitions */
 	.entry a,.entry a:hover,
 	input, input:hover,
 	.featured img.attachment-medium,.featured img.attachment-medium:hover,
 	.menu li img,.menu li:hover img,
+	a.menu img, a.menu:hover img,
 	.gallery li img,
 	.gallery li:hover img,
 	.flexslider .slides li img,
@@ -160,6 +180,56 @@ Text Domain: 	ashleycameron
 	#header {}
 	.navbar-brand {width: 120px; height: 150px;line-height: 1;font-size: 0;text-indent: -999em; padding: 0;position: relative;z-index: 1;}
 	#site-description{width: 39%;float: right;padding: 4px 30% 0 0;font-size: 13px;font-style:italic;line-height:15px;color:#DDD;}
+
+
+.vertical{text-orientation:;}
+#grid h2{letter-spacing:.18em;
+    margin: 18px auto 5px;}
+#grid h3{text-transform: lowercase;
+    font-size: 14px;
+    letter-spacing: .18em;
+    margin: 0 auto 15px;}
+
+/* !Story */
+#story h1 + div {
+    padding: 0;
+}
+img.highlights{margin-right: -50px;margin-bottom: 10%;}
+
+/* !Reservations */
+#reservations .col-md-8 {
+    padding: 0;
+}
+
+/* !Grid */
+#grid .row{clear: both;}
+#grid .row img{min-width: 100%;max-width: inherit;min-height: 100%;
+    height: auto;}
+#grid .row, #grid .text {
+    height: 500px;
+    background: #FFF;
+    overflow: hidden;
+}
+.text h1 {
+    color: #8a7420;
+    width: 34px;
+    margin: 35px auto 0;
+    font-size: 22px;    line-height: 1.4;
+}
+#grid hr {
+    border-top: 2px solid #b03241;
+    width: 18px;
+    margin: 0 auto 12px;
+}
+#grid p {
+    font-style: italic;
+    letter-spacing: .02em;
+    line-height: 1.35;
+    font-size: 13px;
+}
+a.menu:hover img {opacity: .8;
+/*     box-shadow: 0 0 20px #ddd; */
+}
 
 /* !Carousel */
 	#feature *{color: white;}
@@ -305,12 +375,23 @@ border: 1px solid rgba(255, 255, 255, 0);border-radius: 20em;}
 
 /* !Footer  */
 	.copyright { padding: 18px 25px 0; font-size: 1.2rem; margin-bottom: 0; clear: both;}
-	#footer{background: white;  position: relative;text-align: center;border-top: 1px solid #ccc;padding-top: 15px;}
-	#footer span {padding:0 8px;}
+	#footer{clear:both;background: black;position: relative;
+    padding: 46px 15px 24px;
+    font-size: 12.5px;
+    letter-spacing: .04em;}
+	#footer div div div {
+    padding: 0;
+}
+#footer p {
+    margin: 0}
+	#footer a {color: #696969;}
+	#footer h3 {
+    color: #FFF;
+    letter-spacing: .2em;
+    font-size: 17.5px;
+    margin: 0 0 18px;
+}
 	address{margin: 0 auto;}
-	#footer h3 {margin-bottom: 0;}
-	#footer h4 { font-size: 95%; line-height: 1.5;}
-	#footer .menu{margin: 0;}
 	small { color: #8C8C8C; margin: 5px 0 20px; display: block; }
 	small a {font-size: 11px;letter-spacing: .02em;}
 

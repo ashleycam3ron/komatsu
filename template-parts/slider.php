@@ -3,7 +3,7 @@
     <div id="carousel" class="carousel slide">
     	<?php $slider = new WP_Query(array(
 				'post_type' => 'post',
-				'cat'		=> 4,
+				'cat'		=> 1,
 				'posts_per_page' => 7,
 				'orderby' => 'menu_order',
 				'order' => 'ASC',

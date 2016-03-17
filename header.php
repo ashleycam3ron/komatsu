@@ -17,7 +17,9 @@
 	<title><?php echo wp_title();?></title>
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri() ?>/favicon.ico" />
     <link rel="icon" sizes="192x192" href="<?php echo get_stylesheet_directory_uri() ?>/images/favicon-192.png">
-    <link rel="image_src" href="<?php echo get_stylesheet_directory_uri() ?>/images/logo.png" />
+    <link rel="image_src" href="<?php echo get_stylesheet_directory_uri() ?>/images/Komatsu-logo.png" />
+    <script src="https://use.typekit.net/lvz3uwx.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -25,7 +27,7 @@
 
 <header id="header" role="banner">
 	<a class="navbar-brand" href="<?php echo esc_url( home_url() ) ?>">
-		<img class="img-responsive" src="<?php echo get_stylesheet_directory_uri() ?>/images/x-logo.png" alt="x logo">
+		<img class="img-responsive" src="<?php echo get_stylesheet_directory_uri() ?>/images/Komatsu-Logo.png" alt="Komatsu Ramen logo">
 	</a>
 	<nav class="navbar navbar-default" role="navigation">
 		<h2>Primary Navigation</h2>
