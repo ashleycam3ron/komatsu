@@ -57,6 +57,7 @@ Text Domain: 	ashleycameron
 
 /* !01 Structure */
 	* 	 {margin: 0;padding: 0; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; }
+	html,body{height: 100%;}
 	body {font-family:"futura-pt",sans-serif;font-size:14px;color:#696969;}
 	.entry {padding-bottom: 5%;}
 	.inverse{background: black;color: white;padding-top:1.5%;padding-bottom: 2%;}
@@ -103,9 +104,7 @@ Text Domain: 	ashleycameron
     background-color: rgba(0, 0, 0, 0);
     border-color: #7B6E44;
 	}
-	.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {background-color: #FF942A;}
-	.navbar-toggle {border: none;background: transparent!important}
-	.navbar-toggle:hover { background: transparent!important }
+	.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {}
 	.navbar-toggle .icon-bar { width: 22px; transition: all .2s }
 	.navbar-toggle .top-bar { transform: rotate(45deg); transform-origin: 10% 10% }
 	.navbar-toggle .middle-bar { opacity: 0 }
@@ -296,6 +295,9 @@ a.menu-link:hover {opacity: .8;}
 	  border-radius: 0;
 	  padding: 15px 12px;
 	  margin: 0 0 10px;
+	  top: 0;
+	  position: absolute;
+	  right: 0;    z-index: 10;
 	}
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover,
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover,
@@ -353,6 +355,10 @@ li#menu-item-56 a {background-position: -239px -4px;}
 	#sidebar h2:after { left: 4%; }
 
 /* !Coming Soon */
+	.home #header,.home #footer{display: none;}
+	.coming #social li {list-style: none;display: inline-block;text-transform: uppercase;letter-spacing: .2em;margin: 0 13px;}
+	.coming #social a{color: black;}
+	body.home{background: url(images/komatsu-ramen-coming-soon.jpg) no-repeat center -100px;background-size: cover;}
 
 /* !News */
 	.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover { background-color: #000; border-color: rgba(0, 0, 0, 0); border-radius: 20em; }
@@ -368,7 +374,6 @@ li#menu-item-56 a {background-position: -239px -4px;}
     display: inline-block;
     float: none;
     vertical-align: top;
-    padding: 0;
     margin: 0 -6px;
 }
 #menu h4 {
@@ -438,16 +443,24 @@ p.price{color: #b03241;}
 @media (min-width: 768px) and (max-width: 961px){
 }
 @media (max-width: 992px) {
-	#home #grid .row, #grid .text{clear:none;float: left;}
+	#home #grid .row,
+	#home #grid .text{clear:none;float: left;}
 	#home #grid .col-xs-12 {padding: 0;}
 	#home #grid .row{margin: 0;width: 50%;}
 	#home #grid .text {padding: 0 7%;}
-	#grid .item-4 .row,
-	#grid .item-6 .row,
-	#grid .item-5 .text{float: right;}
+	#home #grid .item-4 .row,
+	#home #grid .item-6 .row,
+	#home #grid .item-5 .text{float: right;}
 	.item-7 .col-md-4 {padding: 0;}
 }
 @media (max-width: 768px) {
+	.navbar-brand {
+	    width: 100px;
+	    height: 127px;
+	    position: absolute;
+	    left: 0;
+	    right: 0;
+	}
 	.navbar-default .navbar-collapse{padding: 0;}
 	.navbar-nav .open .dropdown-menu{text-align: center;}
 	.navbar-default .navbar-nav .open .dropdown-menu>.active>a,
@@ -470,9 +483,22 @@ p.price{color: #b03241;}
 	a.menu{display: none;}
 	a.menu-link{display: inline-block;}
 	img.highlights{margin: 0;}
+	#footer{text-align: center;    padding: 16px 15px 24px;}
+	#footer h3 {margin: 24px 0 4px;}
+	#reservations .btn { margin-bottom: 40px;}
+	.navbar-default {margin-bottom: 0;background-color:transparent;}
+	#navbar{background: rgba(255, 255, 255, 0.88);}
+	.navbar-default .navbar-nav>li>a {
+	    width: 100%;
+	    border: 0;
+	    padding: 10px 15px;font-size: 16px;letter-spacing: .2em;
+	    background: rgba(0, 0, 0, 0);
+	}
+
 }
 @media (max-width: 600px) {
-    #home #grid .row, #home #grid .text{height: 300px;}
+    #home #grid .row,
+    #home #grid .text{height: 300px;}
 	#home #grid .col-xs-12 {
 	    width: 100%;
 	    padding: 0;
@@ -488,30 +514,45 @@ p.price{color: #b03241;}
 	    width: 20px;
 	    font-size: 14px;
 	}
+	.carousel-inner>.item { min-height: 300px;}
+	#slider{margin-top: 70px;}
+	.navbar-default {
+    position: absolute;
+    width: 100%;
+}
+#menu {
+    padding-top: 122px;
+}
 
 }
 @media (max-width: 400px) {
 	#home #grid .row,
 	#home #grid .text{height: 200px;}
-#grid h1 {
-    height: 50px;
-    width: 15px;
-    font-size: 10px;
-    line-height: 1.2;
-    margin: 30px auto 0;
-}
-#grid h2 {font-size: 15px;margin: 8px auto 2px;}
-#grid h3{font-size:11px;}
-#grid hr { width: 16px;}
-#home #grid .row img {
-    min-width: 100%;
-    max-width: 102%;}
-h2 {font-size: 16px;}
-
-#footer{text-align: center;    padding: 16px 15px 24px;}
-#footer h3 {
-    margin: 24px 0 4px;
-}
+	#grid h1 {
+	    height: 50px;
+	    width: 15px;
+	    font-size: 10px;
+	    line-height: 1.2;
+	    margin: 30px auto 0;
+	}
+	#grid h2 {font-size: 15px;margin: 8px auto 2px;}
+	#grid h3{font-size:11px;}
+	#grid hr { width: 16px;}
+	#home #grid .row img {
+	    min-width: 100%;
+	    max-width: 105%;}
+	h2 {font-size: 16px;}
+	.carousel-inner>.item {
+	    min-height: 270px;
+	    background-size: cover;
+	    background-position: center bottom;
+	    padding-top: 0;
+	}
+	#reservations h1 {height: 60px;}
+	#story .col-md-6 {padding: 10px 40px 10px 60px;}
+	img.highlights {max-width: inherit;margin: 10px -15px 18px 0;width: 110%;}
+	#story .btn{display: block;}
+	#slider{margin-top: 160px;}
 }
 
 @media (min-width: 992px){

@@ -1,4 +1,4 @@
-<section id="slider">
+<section id="slider" class="row">
 	<h1 class="hidden">Featured Dishes</h1>
     <div id="carousel" class="carousel slide">
             <?php $slider = new WP_Query(array(
@@ -49,7 +49,8 @@
 		});
 	});
 
-<?php if ( wp_is_mobile() ) { ?>
+<?php /*
+if ( wp_is_mobile() ) { ?>
 	jQuery(document).ready(function() {
 	   jQuery("#carousel").swiperight(function() {
 	      jQuery(this).carousel('prev');
@@ -58,5 +59,6 @@
 	      jQuery(this).carousel('next');
 	   });
 	});
-<?php } ?>
+<?php }
+*/ ?>
 </script>
