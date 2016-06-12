@@ -18,6 +18,7 @@
 				$myquery = new WP_Query ($args);
 				$article_count = $myquery->post_count; ?>
 
+			<div class="row <?php echo $term->slug; ?>">
 				<h1><div class="char"><?php echo $japanese; ?></div></h1>
 				<h2><?php echo $term->name; ?></h2>
 				<h3><?php echo $subhead; ?></h3>
@@ -25,8 +26,7 @@
 				<p class="col-sm-4 col-sm-offset-4"><?php echo $term->description; ?></p>
 
 			<?php if ($article_count) {  ?>
-			<div class="row">
-				<ul class="menu">
+				<ul class="menu col-xs-12">
 				<?php while ($myquery->have_posts()) : $myquery->the_post(); ?>
 					<li id="post-<?php the_ID(); ?>" class="col-xs-10 col-xs-offset-1 col-sm-3 col-sm-offset-0">
 			        	<?php if ( has_post_thumbnail() ) { ?>
@@ -43,8 +43,9 @@
 		            </li>
 				<?php endwhile;  ?>
 				</ul>
+			<?php } ?>
 			</div>
-			<?php } } }?>
+		<?php } }?>
 
 		<h2 id="beverages">Beverages</h2>
 		<div class="beverages"><?php //echo do_shortcode('[menu type="beverages"]'); ?>

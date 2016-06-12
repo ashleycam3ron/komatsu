@@ -20,13 +20,13 @@ get_header(); ?>
     </section><!-- end .row -->
 
 	<section id="reservations" class="row text-center">
-		<div class="col-md-4">
+		<div class="col-sm-6 col-md-4">
 			<h1><div class="char">予約</div></h1>
 			<h2>Reservations</h2>
 			<p>Call us or reserve a table in advance online. <br/>Calls can be made the same day.</p>
 			<a class="btn btn-default" href="/menu">Book A Table</a>
 		</div>
-		<div class="col-md-8"><img class="img-responsive" src="<?php echo get_stylesheet_directory_uri();?>/images/Komatsu-interior.jpg" alt="Komatsu interior" /></div>
+		<div class="hidden-xs col-sm-6 col-md-8"><img class="img-responsive" src="<?php echo get_stylesheet_directory_uri();?>/images/Komatsu-interior.jpg" alt="Komatsu interior" /></div>
 	</section>
 
 	<section id="grid" class="row text-center">
@@ -58,9 +58,9 @@ get_header(); ?>
 			<h1><div class="char"><?php echo $japanese; ?></div></h1>
 			<h2><?php echo $term->name; ?></h2>
 			<h3><?php echo $subhead; ?></h3>
-			<hr/>
+			<hr class="hidden-xs"/>
 			<p class="hidden-xs"><em><?php echo $term->description; ?></em></p>
-			<a title="menu" class="menu-link" href="<?php echo esc_url( home_url() ) ?>/menu">献立 Menu</a>
+			<a title="menu" class="menu-link" href="<?php echo esc_url( home_url() ) ?>/menu"><!-- 献立 -->Menu</a>
 			<a title="menu" class="menu" href="<?php echo esc_url( home_url() ) ?>/menu"><img src="<?php echo get_stylesheet_directory_uri();?>/images/menu.png" alt="Menu Link" /></a>
 		</div>
 	<?php } elseif ( $i == 7 ) { ?>
@@ -78,9 +78,9 @@ get_header(); ?>
 				<h1><div class="char"><?php echo $japanese; ?></div></h1>
 				<h2><?php echo $term->name; ?></h2>
 				<h3><?php echo $subhead; ?></h3>
-				<hr/>
+				<hr class="hidden-xs"/>
 				<p class="hidden-xs"><em><?php echo $term->description; ?></em></p>
-				<a title="menu" class="menu-link" href="<?php echo esc_url( home_url() ) ?>/menu">献立 Menu</a>
+				<a title="menu" class="menu-link" href="<?php echo esc_url( home_url() ) ?>/menu"><!-- 献立  -->Menu</a>
 				<a title="menu" class="menu" href="<?php echo esc_url( home_url() ) ?>/menu"><img src="<?php echo get_stylesheet_directory_uri();?>/images/menu.png" alt="Menu Link" /></a>
 			</div>
 		</div>
@@ -98,9 +98,9 @@ get_header(); ?>
 			<h1><div class="char"><?php echo $japanese; ?></div></h1>
 			<h2><?php echo $term->name; ?></h2>
 			<h3><?php echo $subhead; ?></h3>
-			<hr/>
+			<hr class="hidden-xs"/>
 			<p class="hidden-xs"><em><?php echo $term->description; ?></em></p>
-			<a title="menu" class="menu-link" href="<?php echo esc_url( home_url() ) ?>/menu">献立 Menu</a>
+			<a title="menu" class="menu-link" href="<?php echo esc_url( home_url() ) ?>/menu"><!-- 献立  -->Menu</a>
 			<a title="menu" class="menu" href="<?php echo esc_url( home_url() ) ?>/menu"><img src="<?php echo get_stylesheet_directory_uri();?>/images/menu.png" alt="Menu Link" /></a>
 		</div>
 		<div class="row">
