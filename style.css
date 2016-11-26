@@ -58,7 +58,7 @@ Text Domain: 	ashleycameron
 /* !01 Structure */
 	* 	 {margin: 0;padding: 0; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; }
 	html,body{height: 100%;width:100%;}
-	body {font-family:"futura-pt",sans-serif;font-size:14px;color:#696969;}
+	body {font-family:"futura-pt",sans-serif;font-size:14.5px;color:#696969;}
 	.entry {padding-bottom: 5%;}
 	.inverse{background: black;color: white;padding-top:1.5%;padding-bottom: 2%;}
 	b,strong{color: #111;
@@ -189,6 +189,9 @@ img.highlights{margin-right: -50px;margin-bottom: 10%;max-width: 90%;}
 	a.menu-link{color: #AF984D;border: 1px solid #AF984D;padding: 5px 15px;text-transform: uppercase;margin-top: 5px;display: none;font-size: 11px;letter-spacing: .2em;}
 	a.menu:hover img,
 	a.menu-link:hover {opacity: .8;}
+
+	p:empty { display: none; }
+
 
 /* !Carousel */
 	.carousel-control.right,.carousel-control.left{background: transparent;}
@@ -405,8 +408,11 @@ li#menu-item-225 a {
 	}
 	#menu h4 {
 	    letter-spacing: .18em;
-	    font-size: 14px;
+	    font-size: 18px;
 	    color:#333;
+	}
+	#hot-buns h4 {
+	    margin-top: -15px;
 	}
 	p.price{color: #b03241;}
 
@@ -445,7 +451,7 @@ li#menu-item-225 a {
 		    -ms-transform: scale(1);
 		    transform: scale(1);
 		    background: rgba(0, 0, 0, 0);
-			border: 2px solid #000;
+			border: 2px solid #b03241;
 		}
 	    #navbar-menu>li.active>a,
 	    #navbar-menu>li.active>a:focus,
@@ -592,6 +598,13 @@ li#menu-item-225 a {
 }
 @media (min-width: 768px) and (max-width: 961px){
 }
+
+@media (min-width: 420px) and (max-width: 768px){
+	#menu li {width: 33%;}
+	#grid hr {margin: 2px auto 17px;}
+	#footer .col-sm-4 {width: 33%; float: left; }
+	#footer{padding: 16px 0;}
+}
 @media (max-width: 992px) {
 	#home #grid .row,
 	#home #grid .text{clear:none;float: left;}
@@ -606,13 +619,7 @@ li#menu-item-225 a {
 }
 @media (max-width: 768px) {
 	#navbar-menu{display: none;}
-	.navbar-brand {
-	    width: 100px;
-	    height: 127px;
-	    position: absolute;
-	    left: 0;
-	    right: 0;
-	}
+	.navbar-brand { width: 123px; height: 145px; position: absolute; left: 0; right: 0; }
 	.navbar-default .navbar-collapse{padding: 0;}
 	.navbar-nav .open .dropdown-menu{text-align: center;}
 	.navbar-default .navbar-nav .open .dropdown-menu>.active>a,
@@ -646,49 +653,37 @@ li#menu-item-225 a {
 	    padding: 10px 15px;font-size: 16px;letter-spacing: .2em;
 	    background: rgba(0, 0, 0, 0);
 	}
-
+	#menu li > div{padding: 0;}
+	.archive #grid .row img { height: auto; max-width: 100%; }
+	p.price { margin-bottom: 6px; }
+	#salads h4, #hot-buns h4 {margin-top: -10px;}
+	#salads .menu, #hot-buns .menu {margin-top: -17px;}
+	.locations address{margin-bottom: 12px;}
+	#menu, #content {padding-top: 180px;}
 }
-@media (max-width: 600px) {
+@media (max-width: 640px) {
     #home #grid .row,
     #home #grid .text{height: 300px;}
 	#home #grid .col-xs-12 {
 	    width: 100%;
-	    padding: 0;
-	}
+	    padding: 0;}
 	#home #grid .row {padding: 0; width: 50%; margin: 0;}
-
 	.navbar-default { padding-top: 15px; }
 	.navbar-default .navbar-toggle .icon-bar { background-color: #fff; }
     #banner {height: 300px;}
     .gallery{padding: 0;}
-    #grid h1 {
-	    height: 70px;
-	    width: 20px;
-	    font-size: 14px;
-	}
+    #grid h1 {height: 70px; width: 20px; font-size: 14px;}
 	.carousel-inner>.item { min-height: 300px;}
 	#slider{margin-top: 70px;}
-	.navbar-default {
-    position: absolute;
-    width: 100%;
-}
-#menu {
-    padding-top: 122px;
-}
+	.navbar-default {position: absolute;width: 100%;}
 
 }
 @media (max-width: 400px) {
 	#home #grid .row,
 	#home #grid .text{height: 200px;}
-	#grid h1 {
-	    height: 50px;
-	    width: 15px;
-	    font-size: 10px;
-	    line-height: 1.2;
-	    margin: 20px auto 0;
-	}
-	#grid h2 {font-size: 15px;margin: 8px auto 2px;}
-	#grid h3{font-size:11px;margin-bottom: 10px;}
+	#grid h1 { height: 70px; width: 15px; font-size: 15px; line-height: 1.4; margin: 20px auto 0; }
+	#grid h2 {font-size: 22px;margin: 8px auto 4px;}
+	#grid h3{font-size:12px;margin-bottom: 10px;}
 	#grid hr { width: 16px;}
 	#grid .item-4 h1 {margin-top:13px;}
 	#home #grid .row img { min-width: 100%; max-width: 105%;}
@@ -699,8 +694,7 @@ li#menu-item-225 a {
 	    min-height: 270px;
 	    background-size: cover;
 	    background-position: center bottom;
-	    padding-top: 0;
-	}
+	    padding-top: 0;}
 	#story .col-md-6 {padding: 10px 40px;}
 	img.highlights {max-width: inherit;margin: 10px -15px 18px 0;width: 110%;}
 	#story .btn{display: block;}
@@ -709,6 +703,7 @@ li#menu-item-225 a {
 	#reservations h1 {height: 60px;margin-top: 17px;}
 	#reservations h2{color: #fff;}
 	#reservations img{max-width: 100%;}
+	#menu h4 { letter-spacing: .12em; font-size: 15px; margin-bottom: 7px; }
 
 }
 

@@ -32,12 +32,12 @@
 				<h2><?php echo $term->name; ?></h2>
 				<h3><?php echo $subhead; ?></h3>
 				<hr/>
-				<p class="col-sm-4 col-sm-offset-4"><?php echo $term->description; ?></p>
+				<p class="col-sm-4 col-sm-offset-4 col-md-12"><?php echo $term->description; ?></p>
 
 			<?php if ($article_count) {  ?>
-				<ul class="menu col-xs-12">
+				<ul class="menu">
 				<?php while ($myquery->have_posts()) : $myquery->the_post(); ?>
-					<li id="post-<?php the_ID(); ?>" class="col-xs-10 col-xs-offset-1 col-sm-3 col-sm-offset-0">
+					<li id="post-<?php the_ID(); ?>" class="col-xs-6 col-sm-3 col-sm-offset-0">
 			        	<?php if ( has_post_thumbnail() ) { ?>
 					     	 <?php the_post_thumbnail('thumbnail', array( 'class' => 'img-responsive col-sm-12'));?>
 						 <?php } else { ?>
