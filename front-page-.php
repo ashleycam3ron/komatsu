@@ -30,7 +30,7 @@ get_header(); ?>
 	</section>
 
 	<section id="grid" class="row text-center">
-		<?php $args = array('hide_empty' => 0,'exclude' => array(12,13));
+		<?php $args = array('hide_empty' => 0,'exclude' => array(10,12,13));
 			  $terms = get_terms( 'courses', $args );
 
 		if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
@@ -40,6 +40,7 @@ get_header(); ?>
 		        $i++;
 				$subhead = get_field('subheading', $term);
 				$image = get_field('image', $term);
+				//$image = $img['sizes']['feature'];
 				$image2 = get_field('image2', $term); //dessert exception
 				$japanese = get_field('japanese', $term); ?>
 
@@ -49,7 +50,7 @@ get_header(); ?>
 	    // $myclass = 'odd'; ?>
 		<div class="row">
 		 	<?php if( !empty($image) ){ ?>
-		 	  <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+		 	  <img class="img-responsive" src="<?php echo $image['sizes']['feature']; ?>" alt="<?php echo $image['title']; ?>" />
 		 	<?php } else { ?>
 	          <img class="img-responsive" src="http://placehold.it/533x533" alt="placeholder" />
 	       <?php } ?>
@@ -60,14 +61,14 @@ get_header(); ?>
 			<h3><?php echo $subhead; ?></h3>
 			<hr class="hidden-xs"/>
 			<p class="hidden-xs"><em><?php echo $term->description; ?></em></p>
-			<a title="menu" class="menu-link" href="<?php echo esc_url( home_url() ) ?>/menu"><!-- 献立 -->Menu</a>
-			<a title="menu" class="menu" href="<?php echo esc_url( home_url() ) ?>/menu"><img src="<?php echo get_stylesheet_directory_uri();?>/images/menu.png" alt="Menu Link" /></a>
+			<a title="menu" class="menu-link" href="<?php echo esc_url( home_url() ) ?>/menu#<?php echo $term->slug; ?>"><!-- 献立 -->Menu</a>
+			<a title="menu" class="menu" href="<?php echo esc_url( home_url() ) ?>/menu#<?php echo $term->slug; ?>"><img src="<?php echo get_stylesheet_directory_uri();?>/images/menu.png" alt="Menu Link" /></a>
 		</div>
 	<?php } elseif ( $i == 7 ) { ?>
 		<div class="col-md-4">
 			<div class="row">
 		 	<?php if( !empty($image) ){ ?>
-		 	  <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+		 	  <img class="img-responsive" src="<?php echo $image['sizes']['feature']; ?>" alt="<?php echo $image['title']; ?>" />
 		 	<?php } else { ?>
 	          <img class="img-responsive" src="http://placehold.it/533x533" alt="placeholder" />
 	       <?php } ?>
@@ -80,14 +81,14 @@ get_header(); ?>
 				<h3><?php echo $subhead; ?></h3>
 				<hr class="hidden-xs"/>
 				<p class="hidden-xs"><em><?php echo $term->description; ?></em></p>
-				<a title="menu" class="menu-link" href="<?php echo esc_url( home_url() ) ?>/menu"><!-- 献立  -->Menu</a>
-				<a title="menu" class="menu" href="<?php echo esc_url( home_url() ) ?>/menu"><img src="<?php echo get_stylesheet_directory_uri();?>/images/menu.png" alt="Menu Link" /></a>
+				<a title="menu" class="menu-link" href="<?php echo esc_url( home_url() ) ?>/menu#<?php echo $term->slug; ?>"><!-- 献立  -->Menu</a>
+				<a title="menu" class="menu" href="<?php echo esc_url( home_url() ) ?>/menu#<?php echo $term->slug; ?>"><img src="<?php echo get_stylesheet_directory_uri();?>/images/menu.png" alt="Menu Link" /></a>
 			</div>
 		</div>
 		<div class="col-md-4">
 			<div class="row hidden visible-md-block visible-lg-block">
 		 	<?php if( !empty($image2) ){ ?>
-		 	  <img class="img-responsive" src="<?php echo $image2['url']; ?>" alt="<?php echo $image2['alt']; ?>" />
+		 	  <img class="img-responsive" src="<?php echo $image2['url']; ?>" alt="<?php echo $image2['title']; ?>" />
 		 	<?php } else { ?>
 	          <img class="img-responsive" src="http://placehold.it/533x533" alt="placeholder" />
 	       <?php } ?>
@@ -100,12 +101,12 @@ get_header(); ?>
 			<h3><?php echo $subhead; ?></h3>
 			<hr class="hidden-xs"/>
 			<p class="hidden-xs"><em><?php echo $term->description; ?></em></p>
-			<a title="menu" class="menu-link" href="<?php echo esc_url( home_url() ) ?>/menu"><!-- 献立  -->Menu</a>
-			<a title="menu" class="menu" href="<?php echo esc_url( home_url() ) ?>/menu"><img src="<?php echo get_stylesheet_directory_uri();?>/images/menu.png" alt="Menu Link" /></a>
+			<a title="menu" class="menu-link" href="<?php echo esc_url( home_url() ) ?>/menu#<?php echo $term->slug; ?>"><!-- 献立  -->Menu</a>
+			<a title="menu" class="menu" href="<?php echo esc_url( home_url() ) ?>/menu#<?php echo $term->slug; ?>"><img src="<?php echo get_stylesheet_directory_uri();?>/images/menu.png" alt="Menu Link" /></a>
 		</div>
 		<div class="row">
 		 	<?php if( !empty($image) ){ ?>
-		 	  <img class="img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+		 	  <img class="img-responsive" src="<?php echo $image['sizes']['feature']; ?>" alt="<?php echo $image['title']; ?>" />
 		 	<?php } else { ?>
 	          <img class="img-responsive" src="http://placehold.it/533x533" alt="placeholder" />
 	       <?php } ?>

@@ -15,6 +15,7 @@
 	<meta name="dc.subject" CONTENT="<?php bloginfo('description');?>">
 	<meta name="dc.creator" content="Ashley N Cameron">
 	<title><?php echo wp_title();?></title>
+    <meta name="google-site-verification" content="MAtJ-lqevZEmAR0ZxM_967EZOV1Gd5eoc1Zz3HVst0o" />
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri() ?>/favicon.ico" />
     <link rel="icon" sizes="192x192" href="<?php echo get_stylesheet_directory_uri() ?>/images/favicon-192.png">
     <link rel="image_src" href="<?php echo get_stylesheet_directory_uri() ?>/images/Komatsu-logo.png" />
@@ -39,7 +40,7 @@
         </button>
 		<div id="navbar" class="navbar-collapse collapse navbar-ex1-collapse">
 		<?php wp_nav_menu( array(
-			  'menu' => 'primary',
+			  'menu' => 'temp',
 			  'depth' => 2,
 			  'container' => false,
 			  'menu_class' => 'nav navbar-nav',
