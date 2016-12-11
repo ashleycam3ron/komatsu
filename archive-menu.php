@@ -38,15 +38,21 @@
 				<ul class="menu">
 				<?php while ($myquery->have_posts()) : $myquery->the_post(); ?>
 					<li id="post-<?php the_ID(); ?>" class="col-xs-6 col-sm-3 col-sm-offset-0">
-			        	<?php if ( has_post_thumbnail() ) { ?>
-					     	 <?php the_post_thumbnail('thumbnail', array( 'class' => 'img-responsive col-sm-12'));?>
-						 <?php } else { ?>
-							<img class="img-responsive col-sm-12" src="http://placehold.it/200x200/eeeeee/888888">
+			          <?php if ( has_post_thumbnail() ) { ?>
+			        	<?php if ( wp_is_mobile() ) {
+								the_post_thumbnail('thumbnail', array( 'class' => 'img-responsive col-sm-12'));
+							} else {
+								the_post_thumbnail('feature', array( 'class' => 'img-responsive col-sm-12'));
+						    }
+						  } else { ?>
+							<img class="img-responsive col-sm-12" src="http://placehold.it/500x500/eeeeee/888888">
 						 <?php } ?>
 			            <div class="col-sm-12">
 			                <h4><?php the_title(); ?></h4>
 			                <?php if ( get_field('brief_description') ) { ?><p><?php the_field('brief_description'); ?><?php } ?></p>
-			                <span><?php echo implode(', ', get_field('ingredients')); ?></span>
+			                <span><?php if (is_array(get_field('ingredients'))) {
+									echo implode(', ', get_field('ingredients'));
+								} ?></span>
 							<p class="price"><?php the_field('price'); ?></p>
 						</div>
 						<div class="clearfix"></div>

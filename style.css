@@ -205,8 +205,9 @@ img.highlights{margin-right: -50px;margin-bottom: 10%;max-width: 90%;}
 		-moz-transition: opacity .5s ease-in-out;
 		-webkit-transition: opacity .5s ease-in-out;
 		opacity: 1;}
+	.carousel {margin-top: -6%;}
 	.carousel-inner>.item {
-	    min-height: 450px;
+	    min-height: 600px;
 	    background-size: contain;
 	    background-position: left bottom;
 	    background-repeat: no-repeat;
@@ -516,7 +517,7 @@ li#menu-item-225 a {
 
 
 /* !Social */
-	#social h5{text-transform:uppercase;margin:0 2px;color: #777;font-size: 13px;letter-spacing: .1em;}
+	#footer h5{text-transform:uppercase;margin:0 2px;color: #777;font-size: 13px;letter-spacing: .1em;}
 	#social li {display: inline-block}
 	#social li a{width:17px;height:19px;display: block;  margin: 7px;background:url(images/connect.png) no-repeat 2px 2px;text-indent:-9999px;font-size:0;}
 	#social li a:hover{}
@@ -548,7 +549,7 @@ li#menu-item-225 a {
     font-size: 17.5px;
     margin: 0 0 18px;
 }
-	address{margin: 0 auto;}
+	address{margin: 10px auto 0;}
 	small { color: #8C8C8C; margin: 5px 0 20px; display: block; }
 	small a {font-size: 11px;letter-spacing: .02em;}
 
@@ -657,7 +658,7 @@ li#menu-item-225 a {
 	    padding: 10px 15px;font-size: 16px;letter-spacing: .2em;
 	    background: rgba(0, 0, 0, 0);
 	}
-	#menu li > div{padding: 0;}
+	#menu li > div{padding: 0 6px;}
 	.archive #grid .row img { height: auto; max-width: 100%; }
 	p.price { margin-bottom: 6px; }
 	#salads h4, #hot-buns h4 {margin-top: -10px;}

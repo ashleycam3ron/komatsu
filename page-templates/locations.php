@@ -22,7 +22,7 @@ get_header(); ?>
 					<img src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>" />
 					<h4>Komatsu Ramen</h4>
 					<p class="address"><?php echo $location['address']; ?><br/>
-					<a tel="8165996263">+ 816.599.6263</a></p>
+					<a tel="<?php echo the_sub_field('phone'); ?>">+ <?php echo the_sub_field('phone'); ?></a></p>
 					<a target="_blank" class="directions" href="https://www.google.com/maps/place/<?php echo $address[0].$address[1].$address[2].$address[3]; ?>/<?php echo $location['lat'] . ',' . $location['lng']; ?>"><?php _e('Get Directions','ashleycameron'); ?></a>
 				</div>
 		<?php endwhile; ?>

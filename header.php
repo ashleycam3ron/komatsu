@@ -18,6 +18,7 @@
     <meta name="google-site-verification" content="MAtJ-lqevZEmAR0ZxM_967EZOV1Gd5eoc1Zz3HVst0o" />
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri() ?>/favicon.ico" />
     <link rel="icon" sizes="192x192" href="<?php echo get_stylesheet_directory_uri() ?>/images/favicon-192.png">
+    <link rel="apple-touch-icon" href="<?php echo get_stylesheet_directory_uri() ?>/images/apple-touch-icon.png">
     <link rel="image_src" href="<?php echo get_stylesheet_directory_uri() ?>/images/facebook.jpg" />
     <script src="https://use.typekit.net/lvz3uwx.js"></script>
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>

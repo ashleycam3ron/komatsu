@@ -26,11 +26,11 @@
              $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' );
              ?>
 			<div class="item <?php if ( $count == 0){ echo 'active';};?> text-right" data-slide-number="<?php echo $count++;?>" style="background-image:url(<?php echo $image[0];?>);">
-			     <div class="col-md-4 col-md-offset-7">
-				     <p><em>fresh daily</em></p>
+			     <div class="col-md-4 col-md-offset-6 col-lg-5 col-lg-offset-5">
+				     <p><em>made fresh daily</em></p>
 				     <hr/>
 				     <h3><?php the_title();?></h3>
-				     <p class="col-md-4 pull-right" style="padding-right: 0;">Description or list of ingredients here. Description or list of ingredients simply goes here</p>
+				     <p class="col-md-5 pull-right" style="padding-right: 0;"><?php the_field('brief_description'); ?></p>
 				     <p><?php echo implode('<br>', get_field('ingredients')); ?></p>
 			     </div>
 			</div><!-- item active -->
@@ -45,7 +45,7 @@
 <script>
 	jQuery(function($){
 		jQuery('#carousel').carousel({
-		    interval: false
+		    interval: 4000
 		});
 	});
 
