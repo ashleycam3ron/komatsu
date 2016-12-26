@@ -16,10 +16,8 @@
 				<h3>Hours</h3>
 				<div class="col-sm-6">
 					<h5>Kansas City</h5>
-					<p>Monday - Thursday</p>
+					<p>Monday - Saturday</p>
 					<p class="lg">11am - 1:30am</p>
-					<p>Friday - Saturday</p>
-					<p class="lg">11am - 3am</p>
 					<p>Sunday</p>
 					<p class="lg">11am - 12am</p>
 				</div>
